@@ -20,8 +20,8 @@ def main():
     for bs in ventilator.body_systems:
         logger.debug('bs is %s', bs)
 
-    body_systems = 1
-    logging.debug(body_systems)
+    """ body_systems = 1
+    logging.debug(body_systems) """
 
 if __name__ == "__main__":
     main()
