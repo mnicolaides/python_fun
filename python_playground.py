@@ -6,7 +6,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 @dataclass
-class VentilatorMode: 
+class StuffBase: 
     """description of class"""
     body_systems: List[str]
     code: Optional[str]
@@ -27,12 +27,12 @@ class VentilatorMode:
 
 
 @dataclass
-class Ventilator(VentilatorMode):
+class Stuff(StuffBase):
     """description of class"""
 
     def __init__(self) -> None:
         """doc string goes here"""
-        VentilatorMode.__init__(self)
+        StuffBase.__init__(self)
         self.body_systems = []
 
 
@@ -40,9 +40,9 @@ class Tester:
     """description of class"""
     
     @staticmethod
-    def get_ventilator() -> None:
+    def get_Stuff() -> None:
         """doc string goes here"""
-        vent = Ventilator()
+        vent = Stuff()
         vent.body_systems.append('Hello')
 
         for bs in vent.body_systems:

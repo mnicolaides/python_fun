@@ -1,5 +1,5 @@
 from typing import List
-from python_playground import VentilatorMode, Ventilator
+from python_playground import StuffBase, Stuff
 import logging
 
 logger = logging.getLogger(__name__)
@@ -14,10 +14,10 @@ def main():
     body_systems: List = []
     body_systems.append("You stink")
 
-    ventilator: Ventilator = Ventilator()
-    ventilator.Process(body_systems)
+    stuff: Stuff = Stuff()
+    stuff.Process(body_systems)
 
-    for bs in ventilator.body_systems:
+    for bs in stuff.body_systems:
         logger.debug('bs is %s', bs)
 
     """ body_systems = 1
