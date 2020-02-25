@@ -11,16 +11,15 @@ class UTester(unittest.TestCase):
     def tester(self):
         """docstring goes here"""
         stuff = Stuff()
-        stuff.body_systems.append('Hellow')
+        stuff.body_systems.append('Hallo')
         stuff.body_systems.append('Hello')
         bsr: List = []
         bsr.append('Goodbye')
-        bsr.append('Ciao')
         stuff.Process(bsr)
 
         for bs in stuff.body_systems:
             logger.debug('bs is %s', bs)
-            self.assertEqual(bs, 'Hello')
+            self.assertEqual(bs, 'Goodbye')
 
 if __name__ == '__main__':
 	unittest.main()
